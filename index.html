@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav id="nav" class="flex justify-around items-center">
+        <h1 class="text-3xl font-bold text-center py-4">The Wandering Developer</h1>
+        <ul class="flex gap-8">
+            <li class="nav-link"><a href="#about" >About Me</a></li>
+            <li class="nav-link"><a href="#projects" class="hover:text-gray-400">Projects</a></li>
+            <li class="nav-link"><a href="#skills" class="hover:text-gray-400">Skills</a></li>
+            <li class="nav-link"><a href="#education" class="hover:text-gray-400">Education</a></li>
+        </ul>
+    </nav>
+
+   
+    <section id="hero" class="flex relative flex-col items-center gap-4 justify-center h-screen bg-cover bg-center">
+       
+         <!-- Background elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute top-20 left-10 w-96 h-96 bg-indigo-900/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 right-10 w-80 h-80 bg-purple-900/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-40 right-20 w-64 h-64 bg-cyan-900/10 rounded-full blur-3xl"></div>
+        
+        <!-- Decorative grid lines -->
+        <div class="absolute inset-0 grid grid-cols-12 opacity-5 pointer-events-none">
+            <div class="border-r border-cyan-500"></div>
+            <div class="border-r border-cyan-500"></div>
+            <div class="border-r border-cyan-500"></div>
+            <div class="border-r border-cyan-500"></div>
+            <div class="border-r border-cyan-500"></div>
+            <div class="border-r border-cyan-500"></div>
+            <div class="border-r border-cyan-500"></div>
+            <div class="border-r border-cyan-500"></div>
+            <div class="border-r border-cyan-500"></div>
+            <div class="border-r border-cyan-500"></div>
+            <div class="border-r border-cyan-500"></div>
+            <div class="border-r border-cyan-500"></div>
+        </div>
+        <div class="absolute inset-0 grid grid-rows-12 opacity-5 pointer-events-none">
+            <div class="border-b border-cyan-500"></div>
+            <div class="border-b border-cyan-500"></div>
+            <div class="border-b border-cyan-500"></div>
+            <div class="border-b border-cyan-500"></div>
+            <div class="border-b border-cyan-500"></div>
+            <div class="border-b border-cyan-500"></div>
+            <div class="border-b border-cyan-500"></div>
+            <div class="border-b border-cyan-500"></div>
+            <div class="border-b border-cyan-500"></div>
+            <div class="border-b border-cyan-500"></div>
+            <div class="border-b border-cyan-500"></div>
+            <div class="border-b border-cyan-500"></div>
+        </div>
+    </div>
+
+        <div id="socials" class="flex justify-center items-center gap-4 py-4 text-4xl">
+            <!-- <div class="btn-inner-gradient blur"></div> -->
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-linkedin"></i>
+    
+        </div>
+
+        <div class="text-center relative">
+            <h1 id="hero-title" class="text-8xl intro-text">Hi, I'm Raouf 👋</h1>
+            <div class="flex justify-center items-center">
+                <p id="typewriter">The Wandering Developer.</p>
+                <p class="blink">|</p>    
+            </div>
+        </div>
+
+        <button class="btn">
+            <div class="btn-background"></div>
+            <span class="btn-text">Download CV</span>
+        </button>
+
+    </section>
+
+
+    <section id="about" class="flex flex-col items-center justify-center gap-12 py-20 ">
+        <h2 class="text-8xl flex width-100">About me<br><span class="text-center loading">.</span></h2>
+        <div class="flex md:flex-row  flex-col  items-center gap-4 w-3/4">
+            <img class="rounded-full profile" src="./Media/profile.jpeg" alt="Raouf Atabeg" width="300px" height="auto"/>
+            <div class="about-text relative">
+                <p>I'm a passionate developer with a love for creating innovative solutions. I enjoy exploring new technologies and continuously improving my skills.</p>
+                <p>My journey in tech has been a blend of learning, building, and sharing knowledge. I'm excited to connect with like-minded individuals and contribute to meaningful projects.</p>
+                <p>When I'm not coding, you can find me exploring the outdoors, reading, or diving into the latest tech trends.</p>
+                <p>Feel free to reach out if you'd like to collaborate or just chat about tech!</p>
+            </div>
+        </div>
+
+    </section>
+    <section id="projects" class="flex  items-center justify-center gap-4 py-20">
+
+        <h2 class="text-8xl flex">Projects<br><span class="blink text-center">|</span></h2>
+        <div class="system-card relative">
+            <img src="./projects/2048.png" width="200" height="auto"/>
+            <div class="card-content">
+                <p>Project 1</p>
+                <span>
+                <h2 class="text-2xl">2048 Game</h2>
+                <h3>React</h3>
+                </span>
+                <p>2048 is a single-player sliding block puzzle game. The objective is to slide numbered tiles on a grid to combine them to create a tile with the number 2048.</p>
+                <p class="p-2">Check it out</p>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="system-card relative">
+            <img src="./projects/central-asia.png" width="240" height="auto"/>
+            <div class="card-content">
+                <p>Project 2</p>
+                <span>
+                <h2 class="text-2xl">The Central Asian Chronicles</h2>
+                <h3>WordPress</h3>
+                </span>
+                <p>2048 is  tiles on a gri.</p>
+                <p>Check it out</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills" class="flex items-center justify-center gap-4 py-20">
+        <h2 class="text-8xl flex">Skills<br><span class="blink text-center">|</span></h2>
+        <div class="skills-grid">
+            <div class="skills-grid-box">
+                <i class="fa-solid fa-globe"></i>
+                <h3>Web Development</h3>
+                <p>React apps with structured state management. JavaScript and Typescript. Responsive websites using HTML/CSS.</p>
+            </div>
+            <div class="skills-grid-box">
+                <i class="fa-solid fa-database"></i>
+                <h3>Backend Development</h3>
+                <p>REST, gRPC, GraphQL services in NodeJS.</p>
+            </div>
+            <div class="skills-grid-box">
+                <i class="fa-brands fa-uncharted"></i>
+                <h3>Software Development</h3>
+                <p>Relational and NoSQL modelling. GUI in Python </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="flex items-center justify-center gap-4 py-20">
+        <h2 class="text-8xl flex">Experience</h2>
+        <div class="experience-map">
+        <!-- Exxperience 1-->
+        <div class="system-card relative">
+            <div class="card-content">
+                <span>
+                <h2 class="text-2xl">Front End Developer</h2>
+                <h3>LobbyIQ</h3>
+                </span>
+                <p>Creating responsive, user-friendly interfaces that align with modern design trends and performance standards.</p>
+            </div>
+        </div>
+        <!-- Exxperience 2-->
+        <div class="system-card relative">
+            <div class="card-content">
+                <span>
+                <h2 class="text-2xl">Front End Developer</h2>
+                <h3>Queen St Analytics</h3>
+                </span>
+                <p>Creating responsive, user-friendly interfaces that align with modern design trends and performance standards.</p>
+            </div>
+        </div>
+         <!-- Exxperience 3-->
+        <div class="system-card relative">
+            <div class="card-content">
+                <span>
+                <h2 class="text-2xl">Wordpress Developer</h2>
+                <h3>Queen St Analytics</h3>
+                </span>
+                <p>Creating responsive, user-friendly interfaces that align with modern design trends and performance standards.</p>
+            </div>
+        </div>
+
+
+        </div>
+    </section>
+
+     <section id="education" class="flex items-center justify-center gap-4 py-20">
+        <h2 class="text-8xl flex">Education <span class="blink">|</span> </h2>
+        <div class="education-container">
+            <div>
+                <img class="uni-logo" src="https://images.seeklogo.com/logo-png/48/3/western-university-logo-png_seeklogo-482469.png" width="170px" height="auto" />
+            </div>
+            <div class="inner-border">
+                <h2>Bachelor of Computer Science</h2>
+                <h3>University of Western Ontario: Sep 2018 - Oct 2023</h3>
+                <ul style="width:420px;margin-top: 1rem;">
+                   <li>
+                    <span style="background-color: black;color: var(--secondary-light); padding: 0.2rem;">Coursework:</span> math, data structures, algorithms, operating systems, computer architecture, compilers, networking, databases, distributed systems, and more
+                    </li> 
+
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</body>
+<footer class="footer">
+    <script src="./typewriter.js"></script>
+        <script src="./loadingeffect.js"></script>
+
+
+    <p>©2025 Raouf Atabeg</p>
+
+
+</footer>
+</html>
