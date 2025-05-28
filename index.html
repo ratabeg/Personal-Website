@@ -9,15 +9,38 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <nav id="nav" class="flex justify-around items-center">
+    <nav id="nav" class="hidden md:flex justify-around items-center">
         <h1 class="text-3xl font-bold text-center py-4">The Wandering Developer</h1>
-        <ul class="flex gap-8">
+        <ul class="flex gap-8 ">
             <li class="nav-link"><a href="#about" >About Me</a></li>
             <li class="nav-link"><a href="#projects" class="hover:text-gray-400">Projects</a></li>
             <li class="nav-link"><a href="#skills" class="hover:text-gray-400">Skills</a></li>
             <li class="nav-link"><a href="#education" class="hover:text-gray-400">Education</a></li>
         </ul>
+       
     </nav>
+
+
+    <nav class="md:hidden flex flex-wrap items-center  justify-around mobile-nav w-full overflow-hidden">
+
+            <h1 class="text-2xl font-bold text-center py-4 grow-7">The Wandering Developer</h1>
+            <button id="mobile-menu-button" class="relative w-10 h-10 block focus:outline-none group" aria-label="Toggle menu">
+                    <div class="absolute w-5 transform -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
+                        <span class="block h-0.5 w-5 bg-cyan-400 mb-1 transform transition duration-300 ease-in-out" id="line1"></span>
+                        <span class="block h-0.5 w-5 bg-cyan-400 mb-1 transform transition duration-300 ease-in-out" id="line2"></span>
+                        <span class="block h-0.5 w-5 bg-cyan-400 transform transition duration-300 ease-in-out" id="line3"></span>
+                    </div>
+            </button>
+
+            <div id="mobile-menu" class="basis-full px-14">
+                <ul class="flex flex-col py-4">
+                    <li class="nav-link"><a href="#about" >About Me</a></li>
+                    <li class="nav-link"><a href="#projects" class="hover:text-gray-400">Projects</a></li>
+                    <li class="nav-link"><a href="#skills" class="hover:text-gray-400">Skills</a></li>
+                    <li class="nav-link"><a href="#education" class="hover:text-gray-400">Education</a></li>
+                </ul>
+            </div>
+        </nav>
 
    
     <section id="hero" class="flex relative flex-col items-center gap-4 justify-center h-screen bg-cover bg-center">
@@ -61,8 +84,8 @@
 
         <div id="socials" class="flex justify-center items-center gap-4 py-4 text-4xl">
             <!-- <div class="btn-inner-gradient blur"></div> -->
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-brands fa-linkedin"></i>
+            <a id="githubbtn" ><i class="fa-brands fa-github"></i></a>
+            <a id="linkedInbtn"><i class="fa-brands fa-linkedin"></i></a>
     
         </div>
 
@@ -74,7 +97,7 @@
             </div>
         </div>
 
-        <button class="btn">
+        <button class="btn" onclick="window.location.href='./Media/Resume.pdf'">
             <div class="btn-background"></div>
             <span class="btn-text">Download CV</span>
         </button>
@@ -83,7 +106,7 @@
 
 
     <section id="about" class="flex flex-col items-center justify-center gap-12 py-20 ">
-        <h2 class="text-8xl flex width-100">About me<br><span class="text-center loading">.</span></h2>
+        <h2 class="md:text-8xl text-7xl">About me<span class="">...</span></h2>
         <div class="flex md:flex-row  flex-col  items-center gap-4 w-3/4">
             <img class="rounded-full profile" src="./Media/profile.jpeg" alt="Raouf Atabeg" width="300px" height="auto"/>
             <div class="about-text relative">
@@ -95,7 +118,7 @@
         </div>
 
     </section>
-    <section id="projects" class="flex  items-center justify-center gap-4 py-20">
+    <section id="projects" class="flex flex-col items-center justify-center gap-12 py-20 md:flex-row">
 
         <h2 class="text-8xl flex">Projects<br><span class="blink text-center">|</span></h2>
         <div class="system-card relative">
@@ -107,7 +130,7 @@
                 <h3>React</h3>
                 </span>
                 <p>2048 is a single-player sliding block puzzle game. The objective is to slide numbered tiles on a grid to combine them to create a tile with the number 2048.</p>
-                <p class="p-2">Check it out</p>
+                <a id="project1" class="p-2 relative">Check it out</a>
             </div>
         </div>
 
@@ -117,11 +140,11 @@
             <div class="card-content">
                 <p>Project 2</p>
                 <span>
-                <h2 class="text-2xl">The Central Asian Chronicles</h2>
+                <h2 class="text-xl">The Central Asian Chronicles</h2>
                 <h3>WordPress</h3>
                 </span>
-                <p>2048 is  tiles on a gri.</p>
-                <p>Check it out</p>
+                <p>A WordPress-powered publication dedicated to exploring the rich culture, history of Central Asia.</p>
+                <a id="project2" class="p-2 relative">Check it out</a>
             </div>
         </div>
     </section>
@@ -148,7 +171,7 @@
     </section>
 
     <section id="experience" class="flex items-center justify-center gap-4 py-20">
-        <h2 class="text-8xl flex">Experience</h2>
+        <h2 class="md:text-8xl flex text-7xl">Experience</h2>
         <div class="experience-map">
         <!-- Exxperience 1-->
         <div class="system-card relative">
@@ -167,7 +190,7 @@
                 <h2 class="text-2xl">Front End Developer</h2>
                 <h3>Queen St Analytics</h3>
                 </span>
-                <p>Creating responsive, user-friendly interfaces that align with modern design trends and performance standards.</p>
+                <p >Bringing ideas to life through interactive, user-focused web design. I build fast, dynamic, and intuitive interfaces with a strong eye for detail and usability. Skilled in turning complex concepts into clean, functional code using modern tools like React, Tailwind, and JavaScript.</p>
             </div>
         </div>
          <!-- Exxperience 3-->
@@ -177,7 +200,7 @@
                 <h2 class="text-2xl">Wordpress Developer</h2>
                 <h3>Queen St Analytics</h3>
                 </span>
-                <p>Creating responsive, user-friendly interfaces that align with modern design trends and performance standards.</p>
+                <p>Specializing in custom themes, plugins, and dynamic content solutions that empower businesses to manage and grow their websites with ease. I create scalable, SEO-friendly, and performance-optimized WordPress sites tailored to each client's unique goals.</p>
             </div>
         </div>
 
@@ -186,7 +209,7 @@
     </section>
 
      <section id="education" class="flex items-center justify-center gap-4 py-20">
-        <h2 class="text-8xl flex">Education <span class="blink">|</span> </h2>
+        <h2 class="md:text-8xl text-7xl flex">Education <span class="blink">|</span> </h2>
         <div class="education-container">
             <div>
                 <img class="uni-logo" src="https://images.seeklogo.com/logo-png/48/3/western-university-logo-png_seeklogo-482469.png" width="170px" height="auto" />
@@ -206,12 +229,21 @@
 
 </body>
 <footer class="footer">
-    <script src="./typewriter.js"></script>
-        <script src="./loadingeffect.js"></script>
+ 
+
 
 
     <p>©2025 Raouf Atabeg</p>
 
+    <div id="socials" class="flex justify-center items-center gap-4 py-4 text-4xl">
+        <a id="footergithubbtn" ><i class="fa-brands fa-github"></i></a>
+        <a id="footerlinkedInbtn"><i class="fa-brands fa-linkedin"></i></a>
+
+    </div>
+
+    <script src="./typewriter.js"></script>
+    <script src="./script.js"></script>
+    <script src="./data.js"></script>
 
 </footer>
 </html>
