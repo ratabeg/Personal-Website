@@ -348,13 +348,13 @@ html{
 
 .education-container{
     background-color: var(--secondary-light);
-    width: 80vw;
-    height: 280px;
+    /* margin: 2rem; */
     box-shadow: 20px 20px 20px 10px var(--primary-dark);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    padding: 2rem;
 }
 
 .inner-border *{
@@ -442,5 +442,11 @@ z-index: -1; */
 @media (max-width: 768px) {
     .skills-grid,.experience-map{
         grid-template-columns: 1fr !important;
+    }
+    .education-container{
+        flex-direction: column;
+        max-height: fit-content;
+        transform: scale(0.8);
+        padding: 2rem;
     }
 }
